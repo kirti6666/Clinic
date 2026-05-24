@@ -93,11 +93,11 @@ export default function BookingModal() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Date</label>
-                    <input type="date" required className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
+                    <input type="date" required className="w-full h-12 bg-white rounded-xl px-4 text-sm text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
                   </div>
                   <div>
                     <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Time</label>
-                    <input type="time" required className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
+                    <input type="time" required className="w-full h-12 bg-white rounded-xl px-4 text-sm text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
                   </div>
                 </div>
 

@@ -29,14 +29,7 @@ export default function Navbar() {
           >
             DermisproSkinHairLaserClinic
           </Link>
-          
-          <div className="flex items-center gap-2 md:gap-4">
-            <button 
-              onClick={() => window.dispatchEvent(new Event("openBookingModal"))}
-              className="flex text-[10px] md:text-xs font-medium bg-sage text-white px-4 py-1.5 md:py-2 rounded-full hover:bg-forest transition-all cursor-pointer tracking-wide"
-            >
-              Book Appointment
-            </button>
+          <div className="flex items-center">
             <button
               onClick={() => setIsOpen(true)}
               className="min-w-[40px] min-h-[40px] flex items-center justify-center text-forest/70 hover:text-forest transition-colors"
