@@ -22,27 +22,27 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-6xl z-50">
-        <div className="bg-ivory/60 backdrop-blur-md border border-sage-light/50 rounded-full px-5 md:px-8 py-3 flex justify-between items-center shadow-[0_4px_30px_rgba(0,0,0,0.05)]">
+        <div className="bg-ivory/80 backdrop-blur-xl border border-sage-light/40 rounded-full px-4 md:px-6 py-2.5 flex justify-between items-center shadow-[0_4px_40px_rgba(0,0,0,0.08)]">
           <Link
             href="/"
-            className="text-forest font-bold tracking-wide uppercase text-xs sm:text-sm md:text-base font-serif truncate"
+            className="text-forest tracking-widest uppercase text-[10px] sm:text-xs md:text-sm font-serif truncate"
           >
             DermisproSkinHairLaserClinic
           </Link>
           
-          <div className="flex items-center gap-3 md:gap-5">
+          <div className="flex items-center gap-2 md:gap-4">
             <button 
               onClick={() => window.dispatchEvent(new Event("openBookingModal"))}
-              className="hidden sm:flex text-xs md:text-sm font-medium border border-sage-light text-forest px-5 py-2.5 rounded-full hover:bg-sage hover:text-white hover:border-sage transition-all cursor-pointer"
+              className="flex text-[10px] md:text-xs font-medium bg-sage text-white px-4 py-1.5 md:py-2 rounded-full hover:bg-forest transition-all cursor-pointer tracking-wide"
             >
               Book Appointment
             </button>
             <button
               onClick={() => setIsOpen(true)}
-              className="min-w-[40px] min-h-[40px] flex items-center justify-center text-forest hover:text-sage transition-colors"
+              className="min-w-[40px] min-h-[40px] flex items-center justify-center text-forest/70 hover:text-forest transition-colors"
               aria-label="Open menu"
             >
-              <Menu size={26} strokeWidth={1.5} />
+              <Menu size={22} strokeWidth={1.5} />
             </button>
           </div>
         </div>

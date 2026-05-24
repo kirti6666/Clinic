@@ -14,22 +14,22 @@ export default function HeroSection() {
         className="object-cover"
       />
 
-      {/* Strong gradient that fades image seamlessly into the next section (bg-mist) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-mist/10 to-mist pointer-events-none" />
+      {/* Strong dark gradient for elegant text contrast, fading to mist at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-mist pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-4xl mt-16">
         <h1 
-          className="font-serif font-bold text-white mb-4 drop-shadow-md leading-tight w-full"
-          style={{ fontSize: "clamp(1.8rem, 5vw, 5rem)" }}
+          className="font-serif text-white mb-6 tracking-wide leading-[1.15] drop-shadow-xl"
+          style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)" }}
         >
-          Your Skin Deserves the Best Care
+          Your Skin Deserves <br className="hidden sm:block" /> the Best Care
         </h1>
-        <p className="text-mist tracking-[0.2em] text-xs md:text-sm mb-8 uppercase font-semibold drop-shadow-md">
-          DermisproSkinHairLaserClinic
+        <p className="text-white/80 tracking-[0.15em] text-xs md:text-sm mb-10 font-light drop-shadow-md max-w-lg">
+          Designed for your confidence, beauty, and unforgettable results.
         </p>
         <button
           onClick={() => window.dispatchEvent(new Event("openBookingModal"))}
-          className="w-full md:w-auto min-h-[44px] bg-sage text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-forest transition-all hover:shadow-lg hover:-translate-y-1"
+          className="w-full sm:w-auto min-h-[44px] bg-sage text-white px-8 py-3.5 rounded-full font-medium text-sm md:text-base tracking-wide hover:bg-forest transition-all hover:shadow-lg hover:-translate-y-0.5"
         >
           Book Your Appointment Now
         </button>

@@ -21,40 +21,44 @@ export default function BookingModal() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm md:bg-black/40"
             onClick={() => setIsModalOpen(false)}
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full h-full md:h-auto md:max-w-lg bg-ivory md:rounded-2xl shadow-2xl overflow-hidden flex flex-col md:max-h-[90vh]"
+            className="relative w-full h-full md:h-auto md:max-w-md bg-[#FAF9F6] md:rounded-3xl shadow-2xl overflow-hidden flex flex-col md:max-h-[90vh]"
           >
-            <div className="flex justify-between items-center p-4 md:p-6 border-b border-sage-light bg-ivory sticky top-0 z-10">
-              <h2 className="text-xl md:text-2xl font-serif text-forest font-bold">Book Appointment</h2>
+            <div className="absolute top-4 right-4 z-20">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-sage hover:text-forest transition-colors"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center text-forest/70 hover:text-forest transition-colors"
               >
-                <X size={24} />
+                <X size={24} strokeWidth={1.5} />
               </button>
             </div>
             
-            <div className="p-4 md:p-6 overflow-y-auto flex-1">
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsModalOpen(false); }}>
+            <div className="p-6 md:p-8 overflow-y-auto flex-1 flex flex-col">
+              <div className="text-center mb-8 mt-6">
+                <h2 className="text-4xl md:text-5xl font-serif text-[#1C2319] mb-3">DermisPro</h2>
+                <p className="text-sage text-sm tracking-widest font-light uppercase">Book Appointment</p>
+              </div>
+
+              <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); setIsModalOpen(false); }}>
                 <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Name</label>
-                  <input type="text" required className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage" />
+                  <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Name</label>
+                  <input type="text" placeholder="Your Name" required className="w-full h-12 bg-white rounded-xl px-4 text-forest placeholder:text-forest/30 focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-deep-forest mb-1">Age</label>
-                    <input type="number" required min="1" className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage" />
+                    <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Age</label>
+                    <input type="number" placeholder="25" required min="1" className="w-full h-12 bg-white rounded-xl px-4 text-forest placeholder:text-forest/30 focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-deep-forest mb-1">Sex</label>
-                    <select required className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage">
+                    <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Sex</label>
+                    <select required className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent appearance-none">
                       <option value="">Select</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
@@ -64,8 +68,8 @@ export default function BookingModal() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Treatment</label>
-                  <select required className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage">
+                  <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Treatment</label>
+                  <select required className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent appearance-none">
                     <option value="">Select Treatment</option>
                     <option value="Hair Transplant">Hair Transplant</option>
                     <option value="PRP Therapy">PRP Therapy</option>
@@ -76,8 +80,8 @@ export default function BookingModal() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-deep-forest mb-1">Preferred Doctor</label>
-                  <select className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage">
+                  <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Doctor</label>
+                  <select className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent appearance-none">
                     <option value="">Any Doctor</option>
                     <option value="Dr. Aarav Mehta">Dr. Aarav Mehta</option>
                     <option value="Dr. Kiara Sharma">Dr. Kiara Sharma</option>
@@ -86,22 +90,22 @@ export default function BookingModal() {
                   </select>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-deep-forest mb-1">Preferred Date</label>
-                    <input type="date" required className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage" />
+                    <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Date</label>
+                    <input type="date" required className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-deep-forest mb-1">Preferred Time</label>
-                    <input type="time" required className="w-full h-12 border border-sage-light rounded-lg px-4 bg-white focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage" />
+                    <label className="block text-xs font-light text-forest/70 mb-1.5 uppercase tracking-wide">Time</label>
+                    <input type="time" required className="w-full h-12 bg-white rounded-xl px-4 text-forest focus:outline-none focus:ring-1 focus:ring-sage/30 shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-transparent" />
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full h-12 bg-sage text-white rounded-full font-medium hover:bg-forest transition-colors mt-6"
+                  className="w-full h-14 border border-sage text-sage rounded-full font-light tracking-wide hover:bg-sage hover:text-white transition-colors mt-8 mb-4"
                 >
-                  Confirm Booking
+                  Book Appointment
                 </button>
               </form>
             </div>
