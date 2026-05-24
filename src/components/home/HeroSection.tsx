@@ -24,12 +24,12 @@ export default function HeroSection() {
         >
           Your Skin Deserves <br className="hidden sm:block" /> the Best Care
         </h1>
-        <p className="text-white/80 tracking-[0.15em] text-xs md:text-sm mb-10 font-light drop-shadow-md max-w-lg">
-          Designed for your confidence, beauty, and unforgettable results.
+        <p className="text-white tracking-[0.15em] sm:tracking-[0.2em] text-xs md:text-sm mb-8 font-bold uppercase drop-shadow-md">
+          DermisproSkinHairLaserClinic
         </p>
         <button
           onClick={() => window.dispatchEvent(new Event("openBookingModal"))}
-          className="w-full sm:w-auto min-h-[44px] bg-sage text-white px-8 py-3.5 rounded-full font-medium text-sm md:text-base tracking-wide hover:bg-forest transition-all hover:shadow-lg hover:-translate-y-0.5"
+          className="w-full sm:w-auto min-h-[40px] bg-sage text-white px-6 py-2.5 rounded-full font-medium text-xs md:text-sm tracking-wide hover:bg-forest transition-all hover:shadow-md hover:-translate-y-0.5"
         >
           Book Appointment
         </button>

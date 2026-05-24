@@ -27,7 +27,7 @@ export default function Navbar() {
             href="/"
             className="text-forest tracking-widest uppercase text-[10px] sm:text-xs md:text-sm font-serif truncate"
           >
-            DermisproSkinHairLaserClinic
+            DermisPro
           </Link>
           <div className="flex items-center">
             <button
