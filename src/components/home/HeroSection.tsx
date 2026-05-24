@@ -29,7 +29,7 @@ export default function HeroSection() {
         </p>
         <button
           onClick={() => window.dispatchEvent(new Event("openBookingModal"))}
-          className="w-full sm:w-auto min-h-[40px] bg-sage text-white px-6 py-2.5 rounded-full font-medium text-xs md:text-sm tracking-wide hover:bg-forest transition-all hover:shadow-md hover:-translate-y-0.5"
+          className="w-[85%] max-w-[300px] sm:max-w-none sm:w-auto min-h-[44px] bg-sage text-white px-8 py-3.5 rounded-full font-medium text-sm md:text-base tracking-wide hover:bg-forest transition-all hover:shadow-md hover:-translate-y-0.5"
         >
           Book Appointment
         </button>

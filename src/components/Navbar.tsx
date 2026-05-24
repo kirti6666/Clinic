@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="bg-ivory/80 backdrop-blur-xl border border-sage-light/40 rounded-full px-4 md:px-6 py-2.5 flex justify-between items-center shadow-[0_4px_40px_rgba(0,0,0,0.08)]">
           <Link
             href="/"
-            className="text-forest tracking-widest uppercase text-[10px] sm:text-xs md:text-sm font-serif truncate"
+            className="text-forest tracking-[0.2em] uppercase font-bold text-sm sm:text-base md:text-lg font-serif truncate"
           >
             DermisPro
           </Link>
